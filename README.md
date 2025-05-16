@@ -1,11 +1,12 @@
-1. git clone this repository
-2. Change system path in joystick.py and loadpolicy.py
-3. Change model path in line 14 in loadpolicy.py
-
-// Step 1
+```bash
+# Clone repo
 git clone https://github.com/YunSang123/isaac_rover_physical_2.0.git
-// Execute step 2 and 3
 cd isaac_rover_physical_2.0
+
+# Build and source
 colcon build
 source install/setup.bash
+
+# Launch the package
 ros2 launch controller controller.launch.py
+```
