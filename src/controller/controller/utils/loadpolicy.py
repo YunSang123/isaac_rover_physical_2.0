@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0,'/isaac_rover_physical_2.0/src/controller/controller/utils')
+sys.path.insert(0,'/home/jetson/osr_inference_ws/src/isaac_rover_physical_2.0/src/controller/controller/utils')
 
 from student_model import Student
 # from teacher_model import Teacher
@@ -11,7 +11,7 @@ class student_loader():
     def __init__(self,info,model_path="") -> None:
         self.cfg = self.cfg_fn()
         self.info = info
-        self.model = self.load_model('/isaac_rover_physical_2.0/src/controller/controller/utils/models/' + model_path + '/student/data125.pt')
+        self.model = self.load_model('/home/jetson/osr_inference_ws/src/isaac_rover_physical_2.0/src/controller/controller/utils/models/' + model_path + '/student/data125.pt')
         self.h = self.model.belief_encoder.init_hidden(1).to('cuda:0')
 
     def load_model(self, model_name):
