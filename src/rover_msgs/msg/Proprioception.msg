@@ -1,2 +1,3 @@
+float32 curr_time
 float32 distance
 float32 heading
